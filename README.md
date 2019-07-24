@@ -11,7 +11,7 @@
 * 已知BUG：对话框偶尔会跳动至屏幕上方、设置动画函数无效
 > [使用示例](/app/src/main/assets/main.lua)</br>
 > [捐赠支持](https://donate.mxd1.cn/)</br>
-> [演示Demo](https://github.com/smalldi/CustomDialog/release)
+> [演示Demo](https://github.com/smalldi/CustomDialog/releases)
 
 </br>
 
