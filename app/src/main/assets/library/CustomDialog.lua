@@ -27,7 +27,7 @@ import {
 LICENSE = [[
 FileName: CustomDialog.lua
 Author: SmallDi
-Version: 1.2.2
+Version: 1.0.2
 Date: 2019-07-24
 Email: 1753520469@qq.com
 Description: 纯LuaJava代码编写的高度自定义对话框
