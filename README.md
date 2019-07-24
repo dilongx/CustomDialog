@@ -16,9 +16,13 @@
 ### 公共变量
 -------
 LICENSE  --开源协议
+
 MATCH_PARENT  --相对父布局最大化
+
 WRAP_CONTENT  --自适应大小
+
 SCREEN_WIDTH  --屏幕宽度
+
 SCREEN_HEIGHT  --屏幕高度
 
 </br>
