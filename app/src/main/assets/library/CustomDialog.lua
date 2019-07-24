@@ -30,6 +30,7 @@ Author: SmallDi
 Version: 1.0.2
 Date: 2019-07-24
 Email: 1753520469@qq.com
+Github: https://github.com/smalldi/CustomDialog
 Description: 纯LuaJava代码编写的高度自定义对话框
 
 Copyright (C) 2019. SmallDi. All Rights Reserved.
