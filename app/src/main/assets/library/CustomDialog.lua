@@ -190,6 +190,7 @@ function CustomDialog:setMessage(message)
   content.addView(loadlayout{
     ScrollView,
     layout_width="fill";
+    layout_height=SCREEN_HEIGHT/2,
     {
       TextView,
       padding="16dp";
