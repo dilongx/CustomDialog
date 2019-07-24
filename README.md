@@ -10,8 +10,8 @@
 * CustomDialog:build(theme)设置主题，必须使用[:]连接
 * 已知BUG：对话框偶尔会跳动至屏幕上方、设置动画函数无效
 > [使用示例](/app/src/main/assets/main.lua)
-
 > [捐赠支持](https://donate.mxd1.cn/)
+> [演示Demo](https://github.com/smalldi/CustomDialog/release)
 
 </br>
 
