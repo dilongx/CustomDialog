@@ -12,7 +12,7 @@ activity.setContentView(loadlayout"layout.main")
 
 ----****---- 全部函数 ----****----
 --[[
--- 公共变量
+-- 全局变量
 LICENSE  --开源协议
 MATCH_PARENT  --相对父布局最大化
 WRAP_CONTENT  --自适应大小
@@ -21,17 +21,17 @@ SCREEN_HEIGHT  --屏幕高度
 
 
 CustomDialog.build() --初始化
-:setTitle("标题") --设置标题
-:setMessage(LICENSE) --设置内容
-:addView(TextView(this)) --添加控件
-:setContentView({TextView,text="内容"}) --设置视图
-:setCancelable(false) --设置是否可关闭
-:setRadius(Color.WHITE,10,10,10,10) --设置背景颜色与圆角
+:setTitle(String title) --设置标题
+:setMessage(String message) --设置内容
+:addView(View) --添加控件
+:setContentView(View) --设置视图
+:setCancelable(boolean) --设置是否可关闭
+:setRadius(Color,int topLeft,int topRight,int bottomRight,int bottomLeft) --设置背景颜色与圆角
 :setGravity(Gravity.CENTER) --设置内部对齐方式
-:setParams(true) --设置是否全屏和宽高
-:enterAnimation() --打开动画
-:exitAnimation() --关闭动画
-:setButton({"关闭","取消","确定"},{0xff643154}) --添加按钮与按钮背景颜色
+:setParams(boolean,width,height) --设置是否全屏和宽高
+:enterAnimation(Animation) --打开动画
+:exitAnimation(Animation) --关闭动画
+:setButton(table,table) --添加按钮与按钮背景颜色
 :setOnClick(function(dialog,view)dialog.hide()end) --设置按钮点击事件
 :setOnLongClick(function(dialog,view)dialog.hide()end) --设置按钮长按事件
 .show() --显示
@@ -66,7 +66,6 @@ end
 
 -- 简化居中对话框
 function CenterDialog(t)
-  local width = activity.getWidth()
   return CustomDialog.build()
   :enterAnimation(nil,0,10000,0,0)
   :exitAnimation(nil,0,0,0,0)
@@ -76,7 +75,7 @@ function CenterDialog(t)
   :setCancelable(t.cancelable or false)
   :addButton(t.button or {"关闭"},t.buttonColor)
   :setGravity(Gravity.CENTER)
-  :setParams(true,width-200)
+  :setParams(true,SCREEN_WIDTH-200)
 
   :setOnClick(t.onClick)
   --:setOnLongClick(function(dialog,view)dialog.hide()end)
@@ -89,7 +88,7 @@ function ClickEvent(view)
     BottomDialog{
       title="开源协议",
       message=LICENSE,
-      cancelable=false,
+      cancelable=true,
       button={"关闭","知道了"},
       buttonColor={0xff359461},
       onClick=function(dialog,view)
@@ -104,7 +103,7 @@ function ClickEvent(view)
     CenterDialog{
       title="开源协议",
       message=LICENSE,
-      cancelable=false,
+      cancelable=true,
       button={"关闭","知道了"},
       buttonColor={0xff359461},
       onClick=function(dialog,view)
@@ -120,10 +119,11 @@ function ClickEvent(view)
       TextView,
       text=LICENSE,
       padding="32dp";
+      layout_height=SCREEN_HEIGHT/2;
     })
     :addButton({"关闭"},{0xff359461})
     :setRadius(Color.WHITE)
-    :setParams(true,MATCH_PARENT,MATCH_PARENT)
+    :setParams(false,MATCH_PARENT,MATCH_PARENT)
     .show()
 
   end
