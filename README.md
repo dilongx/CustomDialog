@@ -41,8 +41,8 @@ CustomDialog.build() --初始化
 :setRadius(Color,int topLeft,int topRight,int bottomRight,int bottomLeft) --设置背景颜色与圆角
 :setGravity(Gravity.CENTER) --设置内部对齐方式
 :setParams(boolean,width,height) --设置是否全屏和宽高
-:enterAnimation(Animation) --打开动画
-:exitAnimation(Animation) --关闭动画
+:enterAnimation(Animation) --打开动画，未知原因导致无效，待修复
+:exitAnimation(Animation) --关闭动画，未知原因导致无效，待修复
 :setButton(table,table) --添加按钮与按钮背景颜色
 :setOnClick(function(dialog,view)dialog.hide()end) --设置按钮点击事件
 :setOnLongClick(function(dialog,view)dialog.hide()end) --设置按钮长按事件
