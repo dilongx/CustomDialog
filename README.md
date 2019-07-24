@@ -33,17 +33,17 @@ SCREEN_HEIGHT  --屏幕高度
 -------
 ```
 CustomDialog.build() --初始化
-:setTitle("标题") --设置标题
-:setMessage(LICENSE) --设置内容
-:addView(TextView(this)) --添加控件
-:setContentView({TextView,text="内容"}) --设置视图内容
-:setCancelable(false) --设置是否可关闭
-:setRadius(Color.WHITE,10,10,10,10) --设置背景颜色与圆角
+:setTitle(String title) --设置标题
+:setMessage(String message) --设置内容
+:addView(View) --添加控件
+:setContentView(View) --设置视图
+:setCancelable(boolean) --设置是否可关闭
+:setRadius(Color,int topLeft,int topRight,int bottomRight,int bottomLeft) --设置背景颜色与圆角
 :setGravity(Gravity.CENTER) --设置内部对齐方式
-:setParams(true) --设置是否全屏和宽高
-:enterAnimation() --打开动画
-:exitAnimation() --关闭动画
-:setButton({"关闭","取消","确定"},{0xff643154}) --添加按钮与按钮背景颜色
+:setParams(boolean,width,height) --设置是否全屏和宽高
+:enterAnimation(Animation) --打开动画
+:exitAnimation(Animation) --关闭动画
+:setButton(table,table) --添加按钮与按钮背景颜色
 :setOnClick(function(dialog,view)dialog.hide()end) --设置按钮点击事件
 :setOnLongClick(function(dialog,view)dialog.hide()end) --设置按钮长按事件
 .show() --显示
