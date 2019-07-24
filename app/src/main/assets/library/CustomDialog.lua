@@ -23,7 +23,7 @@ import {
 }
 
 
---公共变量
+--全局变量
 LICENSE = [[
 FileName: CustomDialog.lua
 Author: SmallDi
@@ -47,13 +47,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ]]
-SCREEN_WIDTH = activity.getHeight()
+SCREEN_WIDTH = activity.getWidth()
 SCREEN_HEIGHT = activity.getHeight()
 WRAP_CONTENT = ViewGroup.LayoutParams.WRAP_CONTENT
 MATCH_PARENT = ViewGroup.LayoutParams.MATCH_PARENT
 
 
---静态常量
+--私有变量
 local FONT_BOLD = Typeface.defaultFromStyle(Typeface.BOLD)
 local mCustomDialog, mContentView, mDialogObject, mWindow = {}
 local MAIN_COLOR = activity.getSharedData("MAIN_COLOR") or 0xFF009688;
@@ -63,7 +63,7 @@ local mTheme, mDialog = android.R.style.Theme_Material_Light_NoActionBar, Dialog
 local DURATION = activity.getResources().getInteger(android.R.integer.config_mediumAnimTime)
 
 
---静态函数
+--私有函数
 local function RippleDrawable(color)
   local Borderless = android.R.attr.selectableItemBackgroundBorderless
   local StyledAttributes = activity.obtainStyledAttributes({Borderless})
