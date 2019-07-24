@@ -9,9 +9,7 @@
 * 无参数时可以使用[.]连接，例如：[.hide()]和[.show()]
 * CustomDialog:build(theme)设置主题，必须使用[:]连接
 * 已知BUG：对话框偶尔会跳动至屏幕上方、设置动画函数无效
-> [演示示例](/app/src/main/assets/main.lua)
-
-> [开源协议](/app/src/main/assets/main.lua)
+> [使用示例](/app/src/main/assets/main.lua)
 
 </br>
 
